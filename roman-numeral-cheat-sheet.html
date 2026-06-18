@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roman Numeral Cheat Sheet — Print</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a17;
+    --paper: #f3eedd;
+    --paper-line: #b9ab84;
+    --evidence-red: #8a2c2c;
+    --forensic-teal: #2c6e62;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #ddd6c2;
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    color: var(--ink);
+  }
+  .card {
+    max-width: 520px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--paper-line);
+    padding: 28px 30px;
+  }
+  .stamp {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: var(--evidence-red);
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  h1 {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 1.4rem;
+    margin: 0 0 4px;
+  }
+  .sub {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 0 0 20px;
+    color: #54493a;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+  }
+  th, td {
+    border: 1px solid var(--paper-line);
+    padding: 7px 10px;
+    text-align: left;
+  }
+  th {
+    background: #e3dcc4;
+  }
+  .symbols td:first-child, .symbols th:first-child {
+    text-align: center;
+    width: 22%;
+  }
+  .build-table td:nth-child(2) {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--forensic-teal);
+    font-weight: 600;
+  }
+  .note {
+    font-size: 0.8rem;
+    font-style: italic;
+    border-top: 1px dashed var(--paper-line);
+    padding-top: 10px;
+    color: #54493a;
+    margin: 0 0 14px;
+  }
+  .note:last-of-type { margin-bottom: 0; }
+  .footer {
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #8d8472;
+    margin-top: 18px;
+  }
+  .no-print {
+    text-align: center;
+    margin: 18px auto 0;
+    max-width: 520px;
+  }
+  .no-print button {
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 10px 18px;
+    border: 1px solid var(--ink);
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .card { border: none; max-width: none; }
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <p class="stamp">Field Reference &mdash; Investigation Team Issue</p>
+    <h1>Roman Numeral Cheat Sheet</h1>
+    <p class="sub">Base symbols and common combinations, for quick lookup at the table</p>
+
+    <table class="symbols">
+      <tr><th>Symbol</th><th>Value</th><th>Symbol</th><th>Value</th></tr>
+      <tr><td>I</td><td>1</td><td>L</td><td>50</td></tr>
+      <tr><td>V</td><td>5</td><td>C</td><td>100</td></tr>
+      <tr><td>X</td><td>10</td><td>D</td><td>500</td></tr>
+      <tr><td colspan="2"></td><td>M</td><td>1000</td></tr>
+    </table>
+
+    <p class="note">Reading rule: symbols are normally added left to right (VI = 5 + 1 = 6). If a smaller symbol comes <em>before</em> a larger one, it's subtracted instead (IV = 5 &minus; 1 = 4). Only certain smaller-before-larger pairs are valid: IV, IX, XL, XC, CD, CM.</p>
+
+    <table class="build-table">
+      <tr><th>Roman</th><th>Value</th><th>Roman</th><th>Value</th></tr>
+      <tr><td>VII</td><td>7</td><td>IX</td><td>9</td></tr>
+      <tr><td>XVII</td><td>17</td><td>XIX</td><td>19</td></tr>
+      <tr><td>XXVII</td><td>27</td><td>XXIX</td><td>29</td></tr>
+      <tr><td>XXXVII</td><td>37</td><td>XXXIX</td><td>39</td></tr>
+    </table>
+
+    <p class="note">A block of X's adds 10 for each X (XX = 20, XXX = 30, and so on). Tack VII (+7) or IX (+9) onto the end of a block of X's to get the full number.</p>
+    <p class="note">Careful: VII is three characters long; IX is only two. Count the blanks in any cipher carefully &mdash; the total length tells you how many X's are hiding in front.</p>
+
+    <p class="footer">ISSUED TO INVESTIGATION TEAM &middot; KEEP AT THE TABLE</p>
+  </div>
+
+  <div class="no-print">
+    <button onclick="window.print()">Print this card</button>
+  </div>
+
+</body>
+</html>

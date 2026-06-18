@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evidence Folder Label — Print</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a17;
+    --paper: #f3eedd;
+    --paper-line: #b9ab84;
+    --evidence-red: #8a2c2c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #ddd6c2;
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    color: var(--ink);
+  }
+  .card {
+    max-width: 520px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--paper-line);
+    padding: 30px;
+    position: relative;
+  }
+  .corner-stamp {
+    position: absolute;
+    top: 36px;
+    right: -30px;
+    background: var(--evidence-red);
+    color: #f3e8e8;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 2px;
+    padding: 3px 36px;
+    transform: rotate(28deg);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+  .stamp {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+    color: var(--evidence-red);
+    text-transform: uppercase;
+    margin: 0 0 18px;
+    text-align: center;
+  }
+  h1 {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 1.9rem;
+    margin: 0 0 6px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .case-no {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--evidence-red);
+    margin: 0 0 22px;
+    letter-spacing: 2px;
+  }
+  .divider {
+    border: none;
+    border-top: 2px solid var(--ink);
+    margin: 0 0 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+  td {
+    padding: 6px 4px;
+    border-bottom: 1px dotted var(--paper-line);
+  }
+  td.label {
+    width: 38%;
+    color: #54493a;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    vertical-align: top;
+    padding-top: 8px;
+  }
+  td.blank {
+    border-bottom: 1px solid var(--ink);
+  }
+  .warning {
+    font-size: 0.78rem;
+    font-style: italic;
+    text-align: center;
+    color: var(--evidence-red);
+    border: 1px dashed var(--evidence-red);
+    padding: 10px 12px;
+    margin: 0 0 16px;
+  }
+  .footer {
+    text-align: center;
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+    color: #8d8472;
+    margin-top: 6px;
+  }
+  .no-print {
+    text-align: center;
+    margin: 18px auto 0;
+    max-width: 520px;
+  }
+  .no-print button {
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 10px 18px;
+    border: 1px solid var(--ink);
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .no-print p {
+    font-size: 0.8rem;
+    color: #54493a;
+    font-style: italic;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .card { border: 2px solid #000; max-width: none; }
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="corner-stamp">CONFIDENTIAL</div>
+    <p class="stamp">County Investigative Archive</p>
+    <h1>CASE FILE</h1>
+    <p class="case-no">No. 4471</p>
+    <hr class="divider">
+
+    <table>
+      <tr><td class="label">Subject</td><td class="blank">Theodore Ashford (deceased)</td></tr>
+      <tr><td class="label">Location</td><td class="blank">Ashbourne Hall, Study Wing</td></tr>
+      <tr><td class="label">Opened by</td><td class="blank">M. Hale, Family Attorney</td></tr>
+      <tr><td class="label">Assigned to</td><td class="blank">&nbsp;</td></tr>
+      <tr><td class="label">Date opened</td><td class="blank">&nbsp;</td></tr>
+    </table>
+
+    <p class="warning">Contents are not to be removed from this folder or discussed outside the investigation team.</p>
+
+    <p class="footer">FORM C-01 &middot; AUTHORIZED PERSONNEL ONLY &middot; HANDLE WITH CARE</p>
+  </div>
+
+  <div class="no-print">
+    <button onclick="window.print()">Print this label</button>
+    <p>Print and tape or glue to the front of a folder or large envelope to hold your printed props.</p>
+  </div>
+
+</body>
+</html>

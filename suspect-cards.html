@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suspect Cards — Print &amp; Cut</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1a17;
+    --paper: #f3eedd;
+    --paper-line: #b9ab84;
+    --evidence-red: #8a2c2c;
+    --locked-grey: #756b58;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    background: #ddd6c2;
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    color: var(--ink);
+  }
+  .sheet {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .sheet-header {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .stamp {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: var(--evidence-red);
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  h1 {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 1.4rem;
+    margin: 0 0 4px;
+  }
+  .sub {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 0;
+    color: #54493a;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .suspect-card {
+    background: var(--paper);
+    border: 1px dashed var(--paper-line);
+    padding: 20px 20px 18px;
+    position: relative;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .suspect-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 16px;
+    width: 50px; height: 8px;
+    background: var(--paper-line);
+    border-radius: 0 0 3px 3px;
+  }
+  .card-no {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    color: var(--locked-grey);
+    text-transform: uppercase;
+    margin: 6px 0 2px;
+  }
+  .suspect-name {
+    font-family: 'Special Elite', 'Courier New', monospace;
+    font-size: 1.25rem;
+    margin: 4px 0 2px;
+    color: var(--ink);
+  }
+  .suspect-role {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--locked-grey);
+    margin: 0 0 12px;
+  }
+  .suspect-quote {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin: 0 0 12px;
+    flex-grow: 1;
+  }
+  .notes-line {
+    border-top: 1px dotted var(--paper-line);
+    padding-top: 8px;
+    min-height: 36px;
+  }
+  .notes-label {
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8d8472;
+  }
+  .footer {
+    text-align: center;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #8d8472;
+    margin-top: 16px;
+  }
+  .no-print {
+    text-align: center;
+    margin: 18px auto 0;
+    max-width: 680px;
+  }
+  .no-print button {
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 10px 18px;
+    border: 1px solid var(--ink);
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .no-print p {
+    font-size: 0.8rem;
+    color: #54493a;
+    font-style: italic;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .no-print { display: none; }
+    .suspect-card { border: 1px dashed #999; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="sheet">
+    <div class="sheet-header">
+      <p class="stamp">Case File #4471 &mdash; For Discussion</p>
+      <h1>Suspect Cards</h1>
+      <p class="sub">Cut along the dashed lines. Lay out, annotate, and rearrange as your team works the case.</p>
+    </div>
+
+    <div class="grid">
+      <div class="suspect-card">
+        <p class="card-no">Suspect 01</p>
+        <p class="suspect-name">Daniel Whitlock</p>
+        <p class="suspect-role">Son-in-law &middot; works in the company's finance office</p>
+        <p class="suspect-quote">&ldquo;I left the house around 2:30 and went for a long drive to clear my head. I was alone the rest of the afternoon.&rdquo;</p>
+        <div class="notes-line"><span class="notes-label">Team notes</span></div>
+      </div>
+
+      <div class="suspect-card">
+        <p class="card-no">Suspect 02</p>
+        <p class="suspect-name">Olivia Ashford</p>
+        <p class="suspect-role">Daughter &middot; company Vice President</p>
+        <p class="suspect-quote">&ldquo;I was on the garden terrace taking calls about the merger from about 6:30 until just after 9. The security log should confirm that.&rdquo;</p>
+        <div class="notes-line"><span class="notes-label">Team notes</span></div>
+      </div>
+
+      <div class="suspect-card">
+        <p class="card-no">Suspect 03</p>
+        <p class="suspect-name">Richard Pruitt</p>
+        <p class="suspect-role">Theodore's longtime business partner &middot; recently sidelined</p>
+        <p class="suspect-quote">&ldquo;I was at my own home all afternoon, rehearsing a toast I never got to give. I never came near Ashbourne Hall that day.&rdquo;</p>
+        <div class="notes-line"><span class="notes-label">Team notes</span></div>
+      </div>
+
+      <div class="suspect-card">
+        <p class="card-no">Suspect 04</p>
+        <p class="suspect-name">Marta Lin</p>
+        <p class="suspect-role">Theodore's executive assistant of twenty years</p>
+        <p class="suspect-quote">&ldquo;I left for the pharmacy around 5. I can show you the receipt.&rdquo;</p>
+        <div class="notes-line"><span class="notes-label">Team notes</span></div>
+      </div>
+    </div>
+
+    <p class="footer">FORM C-22 &middot; INTERVIEW SUMMARY &middot; NOT FOR GENERAL DISTRIBUTION</p>
+  </div>
+
+  <div class="no-print">
+    <button onclick="window.print()">Print this sheet</button>
+    <p>Prints on a single page (2&times;2 grid). Cut along the dashed lines to make four standalone cards.</p>
+  </div>
+
+</body>
+</html>
