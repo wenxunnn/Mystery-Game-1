@@ -51,19 +51,19 @@ const UNLOCKS = {
 */
 const HINTS = {
   clue1: [
-    "VII and IX don't take up the same amount of space when you write them out. That difference is the whole trick.",
+    "VII and IX don't take up the same amount of space when you write them out."
     "A 5-character number could be 2 X's + VII, or 3 X's + IX. Work out both options for each blank length, then see which combination makes the ordering (smallest, then largest) actually work.",
   ],
   clue2: [
-    "The examiner gave you a date and two temperatures, but no rate. That's not an oversight — it means the rate is somewhere else.",
+    "The examiner gave you a date and two temperatures, but no rate.",
     "Find the listed month on your reference card, then work out how many degrees he'd cooled and how long a drop like that takes at that rate.",
   ],
   clue3: [
-    "Time of death isn't the only detail that has to line up — pay attention to which room each entry actually refers to.",
+    "Time of death isn't the only detail that has to line up.",
     "Only one name shows up inside the Study Wing during the window the autopsy points to, and that name doesn't match what that person told police.",
   ],
   clue4: [
-    "The printed summary and the internal accounting log are supposed to describe the exact same numbers. See whether they actually do, line by line.",
+    "The printed summary and the internal accounting log are supposed to describe the exact same numbers.",
     "Contractor fees is the line to check — the logged amount doesn't match what was printed, and the entry was edited the same week Theodore ordered the audit.",
   ],
 };
