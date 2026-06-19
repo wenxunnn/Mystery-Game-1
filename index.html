@@ -121,7 +121,7 @@
         <tr><th>Stomach contents</th><td>Partially digested, consistent with a meal taken mid-afternoon</td></tr>
         <tr><th>Toxicology</th><td>No alcohol or medication detected</td></tr>
       </table>
-      <p class="examiner-note">Examiner's note: "Temperature alone won't tell you anything. Cooling isn't constant &mdash; it depends on the time of year. You'll need to look elsewhere for the rest of what you need."</p>
+      <p class="examiner-note">Examiner's note: "Temperature alone won't tell you anything. Cooling isn't constant."</p>
 
       <div class="answer-box" data-clue="clue2">
         <label for="input-clue2">What time did Theodore die?</label>
@@ -148,11 +148,6 @@
       <h3>Suspect statements</h3>
       <div class="suspect-grid">
         <div class="suspect-card">
-          <p class="suspect-name">Daniel Whitlock</p>
-          <p class="suspect-role">Son-in-law &middot; works in the company's finance office</p>
-          <p class="suspect-quote">"I left the house around 2:30 and went for a long drive to clear my head. I was alone the rest of the afternoon."</p>
-        </div>
-        <div class="suspect-card">
           <p class="suspect-name">Olivia Ashford</p>
           <p class="suspect-role">Daughter &middot; company Vice President</p>
           <p class="suspect-quote">"I was on the garden terrace taking calls about the merger from about 6:30 until just after 9. The security log should confirm that."</p>
@@ -161,6 +156,11 @@
           <p class="suspect-name">Richard Pruitt</p>
           <p class="suspect-role">Theodore's longtime business partner &middot; recently sidelined</p>
           <p class="suspect-quote">"I was at my own home all afternoon, rehearsing a toast I never got to give. I never came near Ashbourne Hall that day."</p>
+        </div>
+      <div class="suspect-card">
+          <p class="suspect-name">Daniel Whitlock</p>
+          <p class="suspect-role">Son-in-law &middot; works in the company's finance office</p>
+          <p class="suspect-quote">"I left the house around 2:30 and went for a long drive to clear my head. I was alone the rest of the afternoon."</p>
         </div>
         <div class="suspect-card">
           <p class="suspect-name">Marta Lin</p>
@@ -175,7 +175,7 @@
         <tr><th>Time</th><th>Name</th><th>Door</th></tr>
         <tr><td>3:55&nbsp;PM</td><td>D. Whitlock</td><td>Study Wing &mdash; IN</td></tr>
         <tr><td>4:10&nbsp;PM</td><td>D. Whitlock</td><td>Study Wing &mdash; OUT</td></tr>
-        <tr><td>5:02&nbsp;PM</td><td>M. Lin</td><td>Main Hall &mdash; OUT</td></tr>
+        <tr><td>5:12&nbsp;PM</td><td>M. Lin</td><td>Main Hall &mdash; OUT</td></tr>
         <tr><td>6:40&nbsp;PM</td><td>O. Ashford</td><td>Garden Terrace &mdash; IN</td></tr>
         <tr><td>9:15&nbsp;PM</td><td>O. Ashford</td><td>Garden Terrace &mdash; OUT</td></tr>
         <tr><td>11:48&nbsp;PM</td><td>Housekeeper</td><td>Study Wing &mdash; IN (body discovered)</td></tr>
@@ -204,7 +204,11 @@
     <article class="file-sheet">
       <p class="file-tag">Ashford Specialty Catalysts &mdash; Finance Office</p>
       <h2>Quarterly Ledger &amp; Audit Trail</h2>
-      <p>The quarterly expense summary presented to the family and the board listed the following totals:</p>
+
+      <p>
+        The quarterly expense summary presented to the family and the board listed the following totals.
+        Margaret had reportedly asked for the finance records to be rechecked the morning of the incident.
+      </p>
 
       <table class="data-table">
         <tr><th>Expense category</th><th>Reported total</th></tr>
@@ -214,21 +218,72 @@
         <tr><td>Contractor fees</td><td>$51,000</td></tr>
       </table>
 
-      <p>The accounting system keeps its own independent entry log, separate from the printed summary:</p>
+      <p>
+        The printed report only shows final totals. The accounting software, however, keeps an independent
+        entry log showing the original internal entries before the summary was prepared:
+      </p>
 
       <div class="table-scroll">
       <table class="data-table log-table">
-        <tr><th>Entry ID</th><th>User</th><th>Logged</th><th>Amount</th></tr>
-        <tr><td>LED-2287</td><td>dwhitlock</td><td>3 weeks before incident</td><td>$42,000</td></tr>
-        <tr><td>LED-2288</td><td>dwhitlock</td><td>3 weeks before incident</td><td>$158,000</td></tr>
-        <tr><td>LED-2289</td><td>dwhitlock</td><td>3 weeks before incident</td><td>$97,000</td></tr>
-        <tr><td>LED-2310</td><td>dwhitlock</td><td>2 weeks before incident</td><td>$39,000</td></tr>
+        <tr>
+          <th>Entry ID</th>
+          <th>User</th>
+          <th>Logged</th>
+          <th>Vendor / note</th>
+          <th>Category assigned</th>
+          <th>Amount</th>
+        </tr>
+        <tr>
+          <td>LED-2287</td>
+          <td>dwhitlock</td>
+          <td>3 weeks before incident</td>
+          <td>Boiler inspection and replacement valves</td>
+          <td>Equipment maintenance</td>
+          <td>$42,000</td>
+        </tr>
+        <tr>
+          <td>LED-2288</td>
+          <td>dwhitlock</td>
+          <td>3 weeks before incident</td>
+          <td>Platinum-group metal feedstock</td>
+          <td>Raw material purchases</td>
+          <td>$158,000</td>
+        </tr>
+        <tr>
+          <td>LED-2289</td>
+          <td>dwhitlock</td>
+          <td>3 weeks before incident</td>
+          <td>Harrow &amp; Vale Industrial Consulting</td>
+          <td>Contractor fees</td>
+          <td>$97,000</td>
+        </tr>
+        <tr>
+          <td>LED-2310</td>
+          <td>dwhitlock</td>
+          <td>2 weeks before incident</td>
+          <td>Conference travel and client dinner expenses</td>
+          <td>Marketing &amp; travel</td>
+          <td>$39,000</td>
+        </tr>
+        <tr>
+          <td>LED-2316</td>
+          <td>dwhitlock</td>
+          <td>4 days before incident</td>
+          <td>Quarterly report formatting adjustment</td>
+          <td>Contractor fees</td>
+          <td>-$46,000</td>
+        </tr>
       </table>
       </div>
-      <p class="examiner-note">System note: unlike the printed summary, the accounting software timestamps every entry and logs the username behind it, and keeps a permanent edit history for anyone who knows to look.</p>
+
+      <p class="examiner-note">
+        System note: the printed board summary only displays final category totals. The accounting software
+        stores every original entry and every later adjustment separately. Margaret had circled the contractor
+        section in red pencil, but the marked copy was never sent to the board.
+      </p>
 
       <div class="answer-box" data-clue="clue4">
-        <label for="input-clue4">Which Entry ID holds the falsified amount?</label>
+        <label for="input-clue4">Which original Entry ID contains the suspicious contractor amount?</label>
         <input type="text" id="input-clue4" placeholder="e.g. LED-4586" autocomplete="off">
         <div class="answer-actions">
           <button class="btn btn-primary" data-submit="clue4">Submit</button>
